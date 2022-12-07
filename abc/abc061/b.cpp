@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+using ll = long long;
+#define rep(i, n) for (int i=0; i<(int)(n); i++)
+#define rep2(i, a, b) for (int i = a; i < (int)(b); i++)
+using v1d = vector<int>;
+using v2d = vector<vector<int>>;
+
+void print_vec(vector<int> v)
+{
+    rep(i, v.size())
+    {
+        if (i > 0)
+        {cout << " ";}
+        cout << v[i];
+    }
+    cout << endl;
+}
+
+int main()
+{
+    int n, m;
+    unordered_map<int, int> mp;
+    cin >> n >> m;
+    int a, b;
+    rep(i, m)
+    {
+        cin >> a >> b;
+        mp[a-1]++;
+        mp[b-1]++;
+    }
+    rep(i, n)
+    {
+        cout << mp[i] << endl;
+    }
+
+}
+
